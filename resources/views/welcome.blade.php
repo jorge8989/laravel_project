@@ -17,12 +17,12 @@
       <div class="title m-b-md">
         Laravel
       </div>
-      @unless (empty($people))
-        @foreach ($people as $person)
-          <li>{{ $person }}</li>
+      @unless (empty($cars))
+        @foreach ($cars as $car)
+          <li>{{ $car }}</li>
         @endforeach
       @else
-        There's no people
+        There's no cars
       @endunless
     </div>
   </div>

@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Car;
 
 class PagesController extends Controller
 {
     public function home() {
-      $people = ['Jorge', 'Pedro', 'Juan'];
-      return view('welcome', compact('people'));
+      $cars = Car::all();
+      return view('welcome', compact('cars'));
     }
 
     public function about() {
