@@ -11,6 +11,6 @@
 |
 */
 
-  Route::get('/', 'PagesController@home');
+  Route::get('/', 'PagesController@about');
 
-  Route::get('/about', 'PagesController@about');
+  Route::resource('cars', 'CarsController');
