@@ -12,6 +12,11 @@
         <link href="{{ elixir('css/app.css') }}" rel="stylesheet" type="text/css">
     </head>
     <body>
-      @yield('content');
+      <div class="container">
+        @if (Session::has('message'))
+          <div class="alert alert-info alert-dismissible">{{ Session::get('message') }}</div>
+        @endif
+        @yield('content');
+      </div>
     </body>
 </html>
