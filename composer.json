@@ -6,6 +6,8 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "codesleeve/laravel-stapler": "^1.0",
+        "intervention/image": "^2.3",
         "laravel/framework": "5.3.*",
         "laravelcollective/html": "^5.3.0"
     },

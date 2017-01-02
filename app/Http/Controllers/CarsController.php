@@ -38,8 +38,7 @@ class CarsController extends Controller
                ->withInput(Input::except('password'));
        } else {
       $car = new Car;
-      $car->name = Input::get('name');
-      $car->save();
+      $car = Car::create(Input::all());
 
       // redirect
       Session::flash('message', 'Successfully created Car!');
@@ -69,8 +68,7 @@ class CarsController extends Controller
             ->withInput(Input::except('password'));
     } else {
       $car = Car::find($id);
-      $car->name = Input::get('name');
-      $car->save();
+      $car->update(Input::all());
       Session::flash('message', 'Successfully updated Car!');
       return redirect('cars');
     }

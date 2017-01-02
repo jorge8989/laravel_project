@@ -3,10 +3,13 @@
 @section('content')
   <h3>Add new car</h3>
   {{ Html::ul($errors->all()) }}
-  {{ Form::open(['url' => 'cars']) }}
+  {{ Form::open(['url' => 'cars', 'files' => true]) }}
     <div class="form-group">
       {{ Form::label('name', 'Car name') }}
       {{ Form::text('name', Input::old('name'), ['class'=>'form-control']) }}
+    </div>
+    <div class="form-group">
+      {{ Form::file('avatar') }}
     </div>
     <div class="form-group">
       {{ Form::submit('Save', null, ['class'=>'btn']) }}

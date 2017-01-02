@@ -8,5 +8,7 @@
       <td>{{ $car->name }}</td>
     </tr>
   </table>
+  <img src="<?= $car->avatar->url() ?>" >
+  <br />
   {{ link_to_route('cars.index', 'Cars list', null, ['class'=>'btn btn-info']) }}
 @stop

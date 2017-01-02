@@ -22,12 +22,14 @@
           <tr>
             <td>ID</td>
             <td>Name</td>
+            <td>Picture</td>
             <td>Actions</td>
           </tr>
         @foreach ($cars as $car)
           <tr>
             <td>{{ $car->id }}</td>
             <td>{{ $car->name }}</td>
+            <td><img src="<?= $car->avatar->url('thumb') ?>" ></td>
             <td>
               {{ link_to_route('cars.show', $title = 'Details', $parameters = ['car'=>$car->id],
                 $attributes=['class'=>'btn btn-default btn-sm']) }}
